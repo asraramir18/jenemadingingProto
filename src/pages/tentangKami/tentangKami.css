@@ -1,0 +1,71 @@
+.tentangKamiContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 20px;
+}
+
+.tentangKamiBannerContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.tentangKamiLogo{
+    margin-right: 10px;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit:cover
+}
+
+.tentangKamiPict{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit:cover
+}
+
+.tentangKamiBanText{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.tentangKamiAlamat{
+    font-size: 12px;
+}
+
+.tentangKamiComName{
+    font-size: 32px;
+    font-weight:  bolder;
+}
+
+.tentangKamiMainTextContainer{
+    padding: 20px;
+    line-height: 36px;
+    text-align: justify;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 880px) {
+    
+    .tentangKamiComName{
+        font-size: 24px;
+        font-weight:  bolder;
+    }
+
+    .tentangKamiAlamat{
+        font-size: 9px;
+        margin-bottom: 5px;
+    }
+
+    .tentangKamiBannerContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tentangKamiBanText{
+        align-items: center;
+    }
+}
