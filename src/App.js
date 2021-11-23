@@ -5,6 +5,8 @@ import TentangKami from './pages/tentangKami/tentangKami'
 import LokasiPerumahan from './pages/lokasiPerumahan/lokasiPerumahan'
 import ProdukKami from './pages/produkKami/produkKami'
 import Fasilitas from './pages/fasilitas/fasilitas'
+import Siteplan from './pages/siteplan/siteplan'
+import HargaKPR from './pages/hargaKpr/hargaKpr'
 
 
 
@@ -17,6 +19,8 @@ function App() {
         <LokasiPerumahan />
         <ProdukKami />
         <Fasilitas />
+        <Siteplan />
+        <HargaKPR />
       </div>
     </div>
   );

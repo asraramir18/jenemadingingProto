@@ -1,3 +1,20 @@
+h1{
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.pStyle{
+    font-family: 'Open Sans';
+    font-size: 15px !important;
+    font-weight: 700 !important;
+}
+
+.daftarFasilitasContainer{
+    display: flex;
+    flex-direction: row;
+}
+
 .fasilitasContainer{
     display: flex;
     justify-content: center;
@@ -6,10 +23,11 @@
 }
 
 .fasilitasDaftar{
+    background-color: #ffffff;
     padding: 10px;
     border-radius: 15px;
     margin: 20px;
-    box-shadow: 0px 0px 5px 2px #888;
+    box-shadow: 0px 0px 5px 2px rgb(204, 204, 204);
     display: flex;
     flex-direction: column;
 }
@@ -22,23 +40,24 @@
 }
 
 @media screen and (max-width: 880px) {
-    
-    .tentangKamiComName{
-        font-size: 24px;
-        font-weight:  bolder;
-    }
 
-    .tentangKamiAlamat{
-        font-size: 9px;
-        margin-bottom: 5px;
-    }
+    .fasilitasDaftar{
+        margin: 10px;
+    }    
 
-    .tentangKamiBannerContainer{
+    .daftarFasilitasContainer{
+        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
-    .tentangKamiBanText{
-        align-items: center;
+
+    h1{
+        font-size: 20px;
+        font-weight: 800;
+        text-align: center;
     }
+
+    p{
+        font-size: 12px;
+    }
+    
 }

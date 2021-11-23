@@ -1,0 +1,124 @@
+
+.hargaKPRAngsuranContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hargaKPRContainer{
+    padding-top: 40px;
+    background: #FCF3E3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.containerHargaTitle{
+    margin-bottom: 10px;
+    padding: 0px;
+    box-shadow: 0px 0px 10px 1px rgb(192, 192, 192);
+    border-radius: 40px;
+    background-color: #ffffff;
+}
+
+.hargaTitle{
+    font-size: 22px;
+}
+
+.kprGradientText {
+    background: -webkit-linear-gradient(#860000, #B20404);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 45px;
+    font-family: 'Oswald';
+    font-weight: 400;
+}
+
+.biayaAkadText{
+    font-family: 'Oswald';
+    font-size: 18px;
+}
+
+.subsidiTextAwal{
+    padding-right: 20px;
+    padding-top: 8px;
+    font-family: 'oswald';
+    font-size: 18px;
+}
+
+.sukuBungaText {
+    font-family: 'oswald';
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.paddingLeftHargaKpr {
+    padding-left: 30px;
+}
+
+.hargaKprGridItemContainer{
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    margin: 30px 10px 10px 10px;
+    padding: 10px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(3, 28%);
+    grid-template-columns: 40% 20% 50%;
+}
+
+.hargaKprBold {
+    font-weight: 700 !important;
+}
+
+.hargaKprGridtItemHeight{
+    height: 200px;
+}
+
+@media screen and (max-width: 880px) {
+    .hargaKprGridItemContainer{
+        width: 100%;
+        max-width: 1000px;
+        position: relative;
+        margin: 30px 10px 70px 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hargaKprGridtItemHeight{
+        height: 150px;
+        margin-bottom: 20px
+    }
+
+    .containerHargaTitle{
+        position: relative;
+        left: -20px;
+        margin-bottom: 10px;
+        padding: 0px;
+        box-shadow: 0px 0px 10px 1px rgb(192, 192, 192);
+        border-radius: 40px;
+        background-color: #ffffff;
+    }
+
+    .sukuBungaText {
+        font-size: 20px;
+    }
+
+    .subsidiTextAwal{
+        font-size: 15px;
+    }
+
+    .biayaAkadText{
+        font-size: 15px;
+    }
+
+    .kprGradientText {
+        font-size: 41px;
+    }
+    
+}
