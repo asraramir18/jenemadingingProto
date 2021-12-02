@@ -10,6 +10,8 @@ import Wisata from '../../assets/icon/Wisata.png'
 import Button from '../../components/button/button'
 import './fasilitas.css'
 
+const chatWa = "https://wa.me/+6285697106270?text=Hi%20Admin.%20Saya%20mau%20info%20Perumahan%20Je'nemadinging%20Regency%20dong!"
+
 class Fasilitas extends React.Component {
 
     constructor(props) {
@@ -20,7 +22,7 @@ class Fasilitas extends React.Component {
       }
     
     render() {
-        return <div style={{ backgroundColor:'#F2F2F2', display: 'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', paddingBottom: '30px', paddingTop: '30px' }}>
+        return <div id="section4" style={{ backgroundColor:'#F2F2F2', display: 'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', paddingBottom: '30px', paddingTop: '30px' }}>
             <div style={{ maxWidth: '1000px',display: 'flex', flexDirection:'column', justifyContent:'center', alignItems:'center' }}>
                 <div style={{ display: 'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
                     <div className='fontTitle'>FASILITAS</div>
@@ -36,7 +38,7 @@ class Fasilitas extends React.Component {
                             {data.daftarFasilitas.map((data) => {
                             return <div style={{ display: 'flex', alignItems: 'center' }}>
                                 <div style={{ aspectRatio: '1', maxWidth: '24px' }}>
-                                    <img className='fasilitasIcon' src={data.icon} alt={data.text}  />
+                                    <img loading='lazy' className='fasilitasIcon' src={data.icon} alt={data.text}  />
                                 </div>
                                 <p className='pStyle' style={{ margin: '10px' }}>{data.text}</p>
                             </div>
@@ -46,7 +48,7 @@ class Fasilitas extends React.Component {
                     })}
                 </div>
                 <div style={{height: '67px', width:'200px', margin: '20px'}}>
-                    <Button text={"TANYA ADMIN"}/>
+                    <Button onClick={() => window.open(chatWa,'_blank')} text={"TANYA ADMIN"}/>
                 </div>
             </div>
         </div>

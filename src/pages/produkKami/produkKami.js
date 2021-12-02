@@ -25,6 +25,8 @@ const dataRuangan = [{
     text: 'GARASI MOBIL'
 }, ]
 
+const chatWa = "https://wa.me/+6285697106270?text=Hi%20Admin.%20Saya%20mau%20info%20Perumahan%20Je'nemadinging%20Regency%20dong!"
+
 class ProdukKami extends React.Component {
 
     constructor(props) {
@@ -36,7 +38,7 @@ class ProdukKami extends React.Component {
 
     
     render() {
-        return <div style={{ display: 'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', paddingBottom: '30px' }}>
+        return <div id="section3" style={{ display: 'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', paddingBottom: '30px' }}>
             <div style={{ maxWidth: '1200px', padding: '20px' }}>
                 <div style={{display: 'flex', flexDirection:'column',justifyContent:'center', alignItems:'center'}}>
                     <div className="produkTitleContainer">
@@ -44,7 +46,7 @@ class ProdukKami extends React.Component {
                         <div className='greenDivider' />
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'center', alignContent: 'center'}}>
-                        <img class='produkPixt' src={rumah} alt="promoImage" />
+                        <img loading='lazy' className='produkPixt' src={rumah} alt="promoImage" />
                     </div>
                     <div className='productDenahPenjelasanContainer'>
                         <div className="produkRmhTxtContainer">
@@ -62,7 +64,7 @@ class ProdukKami extends React.Component {
                             {dataRuangan.map((data) => {
                                 return <div className='ruanganContainer'>
                                     <div className='iconContainer'>
-                                        <img className='ruanganIcon' src={data.gambar} alt="promoImage" />
+                                        <img loading='lazy' className='ruanganIcon' src={data.gambar} alt="promoImage" />
                                     </div>
                                     <p className="mainGreen ruanganText">{data.text}</p>
                                 </div>
@@ -71,11 +73,11 @@ class ProdukKami extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <img class='produkPixtDenah' src={DenahRumah} alt="promoImage" />
+                    <img loading='lazy' className='produkPixtDenah' src={DenahRumah} alt="promoImage" />
                 </div>
             </div>
             <div style={{height: '67px', width:'200px', margin: '20px'}}>
-                <Button text={"TANYA ADMIN"}/>
+                <Button onClick={() => window.open(chatWa,'_blank')} text={"TANYA ADMIN"}/>
             </div>
         </div>
     }

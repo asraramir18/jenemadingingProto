@@ -14,7 +14,8 @@ class Navbar extends React.Component {
       }
     
     render() {
-        return <div className="navbarContainer">
+        return <nav>
+        <div id='#' className="navbarContainer">
             <div className="mainGreen navbarTitle">
                     JE’NEMADINGING REGENCY
             </div>
@@ -32,7 +33,7 @@ class Navbar extends React.Component {
                         return(
                             <li className="mainGreen" style={{display: 'flex', flexDirection:'row', alignItems: 'center'}}>
                                 {/* <a onClick={() => {setNavCLicked(item.cName)}} className={item.cName} href={item.url}>{item.title}</a> */}
-                                <a className={item.cName} href={item.url}>{item.title}</a>
+                                <a id={item.id} className={item.cName} href={item.id}>{item.title}</a>
                             </li>
                         )
                     })
@@ -40,6 +41,7 @@ class Navbar extends React.Component {
                 </ul>
             </div>
         </div>
+        </nav>
     }
   }
 

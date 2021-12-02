@@ -17,8 +17,9 @@
 }
 
 .containerHargaTitle{
+    display: inline-block;;
     margin-bottom: 10px;
-    padding: 0px;
+    padding: 0px 20px 0px 0px;
     box-shadow: 0px 0px 10px 1px rgb(192, 192, 192);
     border-radius: 40px;
     background-color: #ffffff;
@@ -79,6 +80,18 @@
     height: 200px;
 }
 
+.angsuranTablePict{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit:cover
+}
+
+.syaratKprContainer{
+    display: flex;
+    flex-direction: row;
+}
+
 @media screen and (max-width: 880px) {
     .hargaKprGridItemContainer{
         width: 100%;
@@ -91,7 +104,7 @@
     }
 
     .hargaKprGridtItemHeight{
-        height: 150px;
+        height: 130px;
         margin-bottom: 20px
     }
 
@@ -99,11 +112,23 @@
         position: relative;
         left: -20px;
         margin-bottom: 10px;
-        padding: 0px;
+        padding: 0px 40px 0px 25px;
         box-shadow: 0px 0px 10px 1px rgb(192, 192, 192);
         border-radius: 40px;
         background-color: #ffffff;
     }
+
+    .angsuranTablePict{
+        display: block;
+        max-width: 90%;
+        max-height: 100%;
+        object-fit:cover
+    }
+
+    .syaratKprContainer{
+        padding: 20px;
+        flex-direction: column;
+    }    
 
     .sukuBungaText {
         font-size: 20px;
@@ -118,7 +143,11 @@
     }
 
     .kprGradientText {
-        font-size: 41px;
+        font-size: 35px;
+    }
+
+    .hargaTitle{
+        font-size: 18px;
     }
     
 }

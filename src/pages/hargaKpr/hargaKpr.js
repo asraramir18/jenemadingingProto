@@ -3,6 +3,8 @@ import angsuran from '../../assets/angsuran.png'
 import Button from '../../components/button/button'
 import './hargaKpr.css'
 
+const chatWa = "https://wa.me/+6285697106270?text=Hi%20Admin.%20Saya%20mau%20booking%20unit%20di%20Je'nemadinging%20Regency!"
+
 class HargaKPR extends React.Component {
 
     constructor(props) {
@@ -13,9 +15,9 @@ class HargaKPR extends React.Component {
       }
     
     render() {
-        return <div className='hargaKPRAngsuranContainer'>
+        return <div id="section6" className='hargaKPRAngsuranContainer'>
             <div className='hargaKPRContainer'>
-                <div className='fontTitle'>HARGA & PERSYARATAN KPR</div>
+                <div className='fontTitle' style={{ textAlign: 'center' }}>HARGA & PERSYARATAN KPR</div>
                 <div className='greenDivider'/>
                 {/* <div style={{ display: 'flex', flexDirection: 'row'}}> */}
                 <div className='hargaKprGridItemContainer'>
@@ -86,23 +88,23 @@ class HargaKPR extends React.Component {
                 </div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', maxWidth: '1000px' }}>
-                <div>
-                    <div className='fontTitle'>ANGSURAN</div>
-                    <img class='produkPixt' src={angsuran} alt="promoImage" />
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', paddingTop: '40px'}}>
+                    <div className='fontTitle' style={{ textAlign: 'center'}}>ANGSURAN</div>
+                    <img loading='lazy' className='angsuranTablePict' src={angsuran} alt="promoImage" />
                 </div>
                 <div>
-                    <div className='fontTitle'>PERSYARATAN KPR</div>
-                    <div style={{ display: 'flex'}}>
-                        <ol>
+                    <div className='fontTitle' style={{ textAlign: 'center', paddingTop: '40px'}}>PERSYARATAN KPR</div>
+                    <div className='syaratKprContainer'>
+                        <ol style={{ paddingLeft: '20px', marginRight: '40px'}}>
                             {persyaratanKpr1.map((data) => {
-                                return<li>
+                                return<li style={{ lineHeight: '30px'}}>
                                     {data}
                                 </li>
                             })}
                         </ol>
-                        <ol style={{start: "8"}}>
+                        <ol start="8" style={{ paddingLeft: '20px'}}>
                             {persyaratanKpr2.map((data) => {
-                                return<li>
+                                return<li style={{ lineHeight: '30px'}}>
                                     {data}
                                 </li>
                             })}
@@ -110,8 +112,8 @@ class HargaKPR extends React.Component {
                     </div>
                 </div>
             </div>
-            <div style={{height: '67px', width:'200px', margin: '20px'}}>
-                <Button text={"BOOKING SEKARANG"}/>
+            <div style={{height: '67px', width:'300px', margin: '20px'}}>
+                <Button onClick={() => window.open(chatWa,'_blank')} text={"BOOKING SEKARANG"}/>
             </div>
         </div>
     }

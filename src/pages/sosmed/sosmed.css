@@ -1,0 +1,46 @@
+
+
+.sosmedLogoImg{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    aspect-ratio: 1;
+    max-width: 32px;
+    margin-right: 10px;
+}
+
+.sosmedText{
+    font-size: 22px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.sosmedIGFBContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.sosmedIconContainer{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.sosmedIconContainer:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 880px) {
+
+    .sosmedIGFBContainer {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .youtubeVideo{
+        height: 300px;
+    }
+}

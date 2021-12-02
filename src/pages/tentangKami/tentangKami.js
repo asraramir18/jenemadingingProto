@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../../assets/logo.png'
 import ads2 from '../../assets/ads2.png'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 import './tentangKami.css'
 
 class TentangKami extends React.Component {
@@ -8,26 +10,28 @@ class TentangKami extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            menuActive: false
+            menuActive: false,
+            imageLoad: true
           };
       }
     
     render() {
-        return <div className="tentangKamiContainer">
+        return <div id="section1" className="tentangKamiContainer">
             <div style={{ maxWidth: '780px' }}>
-                <div class="tentangKamiBannerContainer">
+                <div className="tentangKamiBannerContainer">
                     <div>
-                        <img class='tentangKamiLogo' src={logo} alt="promoImage" />
+                        <img loading='lazy' className='tentangKamiLogo' src={logo} alt="promoImage" />
                     </div>
                     <div className="tentangKamiBanText">
-                        <div className='tentangKamiComName mainGreen'>PT SUKSES SEJAHTERA LAND</div>
+                        <div className='tentangKamiComName mainGreen'>{ 'PT SUKSES SEJAHTERA LAND' || <Skeleton /> } </div>
                         <div className='tentangKamiAlamat'>Jl. Andi Tonro Perumahan Andi Tonro Permai, Blok D1 No. 3, 92114, Gowa</div>
                         <div className='greenDivider'/>
                     </div>
                 </div>
                 <div>
                     <div style={{padding: '20px'}}>
-                        <img class='tentangKamiPict' src={ads2} alt="promoImage" />
+                        {this.state.imageLoad && <Skeleton className='tentangKamiSkeleton' />}
+                        <img loading='lazy' onLoad={() => this.setState({ imageLoad: false })} className='tentangKamiPict' src={ads2} alt="promoImage" />
                     </div>
                     <div className='tentangKamiMainTextContainer'>
                         PT. Sukses Sejahtera Land merupakan perusahaan yang bergerak di bidang properti (real estate) khususnya di perumahan subsidi. 

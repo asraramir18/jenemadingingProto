@@ -1,4 +1,5 @@
 .navbarContainer{
+    position: relative;
     padding:20px
 }
 
@@ -56,20 +57,20 @@
     }
 
     .navMenuContainer{
+        background-color: rgba(255, 255, 255, 0.8);;
         display: flex;
         flex-direction: column;
         /* width: 300px; */
         height: auto;
         position: absolute;
         padding-left: 0px;
-        top: -100%;
+        top: -1000%;
         right: 0;
         opacity: 1%;
         transition: all 0.5s ease;
     }
 
     .navMenuContainer.active {
-        background-color: #fff;
         padding-left: 10px;
         top: 48px;
         opacity: 1;
@@ -83,7 +84,6 @@
         margin: 10px;
         width: 100%;
         display: table;        
-        background-color: #fff;
         border-radius: 0;
     }
     

@@ -3,6 +3,8 @@ import siteplan from '../../assets/siteplan.png'
 import Button from '../../components/button/button'
 import './siteplan.css'
 
+const chatWa = "https://wa.me/+6285697106270?text=Hi%20Admin.%20Saya%20mau%20booking%20unit%20di%20Je'nemadinging%20Regency!"
+
 class Siteplan extends React.Component {
 
     constructor(props) {
@@ -13,7 +15,7 @@ class Siteplan extends React.Component {
       }
     
     render() {
-        return <div className="siteplanContainer">
+        return <div id="section5" className="siteplanContainer">
             <div style={{ maxWidth: '1000px' }}>
                 <div className='titleContainer'>
                     <div className='fontTitle'>SITEPLAN</div>
@@ -21,14 +23,14 @@ class Siteplan extends React.Component {
                 </div>
                 <div className='sitePlanBodyContainer'>
                     <div style={{maxWidth: '450px', margin: '20px'}}>
-                        <img class='siteplanPict' src={siteplan} alt="promoImage" />
+                        <img loading='lazy' className='siteplanPict' src={siteplan} alt="promoImage" />
                     </div>
                     <div>
                         <div className='siteplanBiasa'>
-                            <p>
+                            <p className='siteplanText'>
                                 Luas Lahan Saat ini <span className='mainGreen siPertegas'>1,3 HA</span>
                             </p>
-                            <p>
+                            <p className='siteplanText'>
                                 Total Unit <span className='mainGreen siPertegas'>90 Unit</span>
                             </p>
                         </div>
@@ -36,16 +38,16 @@ class Siteplan extends React.Component {
                             <div className='siteplanSegera'>
                                 SEGERA!
                             </div>
-                            <p>
+                            <p className='siteplanText'>
                                 Rencana pengembangan <span className='mainGreen siPertegas'> ±3 HA</span>
                             </p>
-                            <p>
+                            <p className='siteplanText'>
                                 Dengan jumlah unit hingga <span className='mainGreen siPertegas'> 300 Unit </span>
                             </p>
                         </div>
                         <div className='buttonContainerTop'>
-                            <div style={{height: '67px', width:'250px', marginLeft: '20px', marginTop: '40px'}}>
-                                <Button text={"BOOKING SEKARANG"}/>
+                            <div className='sitePlanButton'>
+                                <Button onClick={() => window.open(chatWa,'_blank')} text={"BOOKING SEKARANG"}/>
                             </div>
                         </div>
                     </div>
