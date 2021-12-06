@@ -18,7 +18,6 @@ function App() {
     <div className="App">
       <Navbar />
       <div style={{justifyContent:'center'}}>
-      <SosialMedia />
         <TentangKami/>
         <LokasiPerumahan/>
         <ProdukKami/>
@@ -26,7 +25,7 @@ function App() {
         <Siteplan />
         <HargaKPR />
         <VideoPerum />
-
+        <SosialMedia />
       </div>
       <Footer />
     </div>

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Button from '../../components/button/button'
 import facebook from '../../assets/icon/facebook.png'
 import instagram from '../../assets/icon/instagram.png'
+import InstagramEmbed from 'react-instagram-embed';
+import Instafeed from 'instafeed.js'
+
 import {Helmet} from "react-helmet";
 import './sosmed.css'
 
@@ -22,7 +25,9 @@ class SosialMedia extends React.Component {
       runScriptMethods(){
           console.log('TES RUN SCRIPT')
           var feed = new Instafeed({
-            accessToken: 'your-token'
+            accessToken: 'IGQVJYdy1uYm5LUlFfWFFYLUtZAWWY2cERKVDBSa3lzV3I3el9yN01BUFRTbHZAzQUFlQjltWmhqdkFENlFSYl91RERLVy1QajBRdHNMTm1LclNtdmlERjJvUC1kWTZALSzRndkFkQUprVDJRbUVIVUFZAVAZDZD',
+            limit: 9,
+            template: "<a href='{{link}}' class='instagramDisplayGridItem'><img class='imageIG' title='{{caption}}' src='{{image}}' /></a>"
           });
           feed.run();
       }
@@ -35,36 +40,27 @@ class SosialMedia extends React.Component {
       async componentDidMount(){
         const scriptInstall = document.createElement("script");
         const scriptUse = document.createElement("script");
-        const script = document.createElement("script");
         
-        document.head.appendChild(script);
         document.body.appendChild(scriptInstall);
         document.body.appendChild(scriptUse);
-        script.src = "../../js/instafeed.min.js";
-        script.async = true;
-        script.onload = () => this.runScriptMethods();
 
         scriptInstall.src = "../../js/instafeed.min.js";
         scriptInstall.async = true;
 
         scriptUse.src = "../../js/instafeed.min.js";
-        scriptUse.onload = () => this.igScript()
+        scriptUse.onload = () => this.runScriptMethods()
         scriptUse.async = true
         console.log("THIS IS RUNNING ASNYC 1")
-        console.log("THIS IS RUNNING ASNYC 2")
       }
     
     render() {
         return <div id="section8" style={{ display: 'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', paddingBottom: '30px', paddingTop: '30px' }}>
-            <div style={{ width: '100%', maxWidth: '800px',display: 'flex', flexDirection:'column', justifyContent:'center', alignItems:'center' }}>
+            <div style={{ width: '100%', maxWidth: '900px',display: 'flex', flexDirection:'column', justifyContent:'center', alignItems:'center' }}>
                 <div style={{ display: 'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
                     <div className='fontTitle'>SOSIAL MEDIA</div>
                     <div className='greenDivider'/>
                 </div>
-                <div style={{ height: '200px' }}>
-                <script type="text/javascript"></script>
-                <div id="instafeed"></div>
-                </div>
+                <div id="instafeed" className="instagramDisplayGrid"></div>
                 <div className='sosmedIGFBContainer'>
                     <div  onClick={() => window.open(igLink,'_blank')} className='sosmedIconContainer'>
                         <img loading='lazy' className='sosmedLogoImg' src={instagram} alt='instagramSosmed'  />

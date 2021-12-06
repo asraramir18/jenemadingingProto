@@ -10,13 +10,43 @@
     margin-right: 10px;
 }
 
+.instagramDisplayGrid {
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-rows: repeat(3, 35%);
+    /* grid-template-rows: repeat(3, minmax(auto, 400px)); */
+    /* grid-template-columns: repeat(3, 400px); */
+    grid-template-columns: repeat(3, minmax(auto, 400px));
+    align-items: center;
+    justify-items: center;
+}
+
+.instagramDisplayGridItem {
+    align-self: center;
+    justify-self: center;
+}
+
+.imageIG{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 400px;
+}
+
 .sosmedText{
     font-size: 22px;
     font-weight: 700;
     margin-right: 10px;
+    vertical-align: middle;
 }
 
 .sosmedIGFBContainer {
+    margin-top: 70px;
     display: flex;
     flex-direction: row;
 }
@@ -25,6 +55,8 @@
     margin: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .sosmedIconContainer:hover{
@@ -35,6 +67,15 @@
 
     .sosmedIGFBContainer {
         flex-direction: column;
+        margin-top: 40px;
+    }
+    .sosmedText{
+        font-size: 18px;
+    }
+
+    .instagramDisplayGrid{
+        row-gap: 5px;
+        column-gap: 5px;
     }
 
 }
